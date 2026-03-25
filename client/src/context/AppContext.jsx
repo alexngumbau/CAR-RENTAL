@@ -15,7 +15,7 @@ export const AppProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isOwner, setIsOwner] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-  const [pickupDate, setPickUpDate] = useState("");
+  const [pickupDate, setPickupDate] = useState("");
   const [returnDate, setReturnDate] = useState("");
   const [cars, setCars] = useState([]);
 
@@ -87,7 +87,7 @@ export const AppProvider = ({ children }) => {
     cars,
     setCars,
     pickupDate,
-    setPickUpDate,
+    setPickupDate,
     returnDate,
     setReturnDate
   };
