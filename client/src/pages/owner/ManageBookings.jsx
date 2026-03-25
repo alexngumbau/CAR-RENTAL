@@ -26,12 +26,15 @@ const ManageBookings = () => {
     }
   }
 
+  console.log(bookings);
 
 
   useEffect(() => {
     fetchOwnerBookings();
   }, [])
   return (
+    
+    
     <div className='px-4 pt010 md:px-10 w-full'>
       <Title title="Manage Bookings" subTitle="Track all customer bookings, approve or cancel requests, and manage booking statuses." />
 
@@ -70,7 +73,7 @@ const ManageBookings = () => {
 
                 <td className='p-3'>
                   {booking.status === 'pending' ? (
-                    <select onchange={e => changeBookingStatus(booking._id, e.target.value)} value={booking.status} className='px-2 py-1.5 mt-1 text-gray-500 border border-borderColor rounded-md outline-none' >
+                    <select onChange={e => changeBookingStatus(booking._id, e.target.value)} value={booking.status} className='px-2 py-1.5 mt-1 text-gray-500 border border-borderColor rounded-md outline-none' >
                       <option value="pending">Pending</option>
                       <option value="cancelled">Cancelled</option>
                       <option value="confirmed">Confirmed</option>
