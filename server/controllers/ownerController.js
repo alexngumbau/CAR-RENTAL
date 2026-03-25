@@ -126,7 +126,7 @@ export const getDashboardData = async (req, res) => {
     });
     const completedBookings = await Booking.find({
       owner: _id,
-      status: "completed",
+      status: "confirmed",
     });
 
     // Calculate monthlyRevenue from bookings where status is confirmed
