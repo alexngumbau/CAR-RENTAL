@@ -72,7 +72,6 @@ export const toggleCarAvailability = async (req, res) => {
     
     
     const { carId } = req.body;
-    console.log('This is the id', carId);
     const car = await Car.findById(carId);
 
     // Check if the car belongs to the user
