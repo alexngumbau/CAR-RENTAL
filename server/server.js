@@ -21,6 +21,6 @@ app.use(express.json());
 app.get('/', (req, res) => res.send("Sever is Running"));
 app.use('/api/user', userRouter);
 app.use('/api/owner', ownerRouter);
-app.use('/api/booking', bookingRouter);
+app.use('/api/bookings', bookingRouter);
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));

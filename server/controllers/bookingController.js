@@ -12,9 +12,9 @@ const checkAvailability = async (car, pickupDate, returnDate) => {
 };
 
 // API to check availability of cars for the given date and location
-export const checkAvailabilityOfCar = async (requestAnimationFrame, res) => {
+export const checkAvailabilityOfCar = async (req, res) => {
   try {
-    const { location, pickupDate, returnDate } = requestAnimationFrame.body;
+    const { location, pickupDate, returnDate } = req.body;
 
     // fetch all available cars for the given location
     const cars = await Car.find({ location, isAvailable: true });
