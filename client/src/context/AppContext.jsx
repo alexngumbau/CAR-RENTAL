@@ -44,6 +44,11 @@ export const AppProvider = ({ children }) => {
     }
   };
 
+  // update the cars state for newly added cae
+  const addCar = (newCar) => {
+    setCars((prevCars) => [...prevCars, newCar]);
+  }
+
   // Function to log out the user
   const logout = () => {
     localStorage.removeItem("token");
@@ -89,7 +94,8 @@ export const AppProvider = ({ children }) => {
     pickupDate,
     setPickupDate,
     returnDate,
-    setReturnDate
+    setReturnDate,
+    addCar
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
