@@ -26,9 +26,6 @@ const ManageBookings = () => {
     }
   }
 
-  console.log(bookings);
-
-
   useEffect(() => {
     fetchOwnerBookings();
   }, [])
