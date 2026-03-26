@@ -13,7 +13,6 @@ const MyBookings = () => {
     try {
       const { data } = await axios.get("/api/bookings/user");
       if (data.success) {
-        console.log(data);
 
         setBookings(data.bookings);
       } else {
