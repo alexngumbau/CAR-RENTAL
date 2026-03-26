@@ -5,7 +5,7 @@ import { useAppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
 
 const AddCar = () => {
-  const { axios, currency } = useAppContext();
+  const { axios, currency, addCar } = useAppContext();
 
   const [image, setImage] = useState(null);
   const [car, setCar] = useState({
@@ -36,6 +36,9 @@ const AddCar = () => {
       const { data } = await axios.post("/api/owner/add-car", formData);
       if (data.success) {
         toast.success(data.message);
+        addCar(data.car)
+        console.log(data);
+        
         setImage(null);
         setCar({
           brand: "",
